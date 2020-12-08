@@ -1,7 +1,7 @@
 {
-  "name": "myApp",
+  "name": "movie_info",
   "integrations": {
-    "capacitor": {}
+    "cordova": {}
   },
   "type": "angular"
 }

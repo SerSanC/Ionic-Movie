@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ApiService {
   public authToken:any='eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MTRhZDQ5NTZiZTFiN2JhNjRjMmY1MzQ1MzliODhjMCIsInN1YiI6IjVmY2U0ODE3OTVjMGFmMDA0NmE3NjFkYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Qhez7wSb73WwmiZNzq_ZYXvqwTjX-FmJmvgZ46HJUdw';
   public apiKey:any='514ad4956be1b7ba64c2f534539b88c0';
@@ -12,7 +13,6 @@ export class ApiService {
   constructor(
     public http:HttpClient
   ) { }
-
 
   setHeader(){
     let header =  new HttpHeaders({ Authorization: "Bearer " + this.authToken });
