@@ -1,6 +1,6 @@
 # Ionic Movie Search
 
-<img src="./doc/Demo.gif" />
+<img src="./doc/Demo.gif" text-align = "center" width= 300px height = 500px />
 
 ## Developed Using:
 <lu>
