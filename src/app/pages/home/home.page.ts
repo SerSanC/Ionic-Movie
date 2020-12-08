@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
-import { ApiService } from '../service/api.service';
+import { ApiService } from '../../service/api.service';
 
 @Component({
   selector: 'app-home',
