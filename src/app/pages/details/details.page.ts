@@ -25,7 +25,10 @@ export class DetailsPage implements OnInit {
 
   ngOnInit() {
   }
-
+  /**
+   * Función encargada de adaptar la abreviatura del idioma devuelto por el json a su correcto nombre
+   * @param data 
+   */
   idiom(data){
     if(data.original_language.trim()==("en")){
       data.original_language = "Inglés";
@@ -36,7 +39,7 @@ export class DetailsPage implements OnInit {
       this.res = true;
     }
     if(data.original_language.trim()==("ja")){
-      data.original_language = "Japones";
+      data.original_language = "Japonés";
       this.res = true;
     }
     return this.res;

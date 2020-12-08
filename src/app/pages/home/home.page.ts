@@ -33,7 +33,10 @@ export class HomePage {
       }
     });
   }
-
+  /**
+   * Esta función tiene como objetivo cargar la ruta de la vista 
+   * @param data 
+   */
   view(data){
     let navigationExtras: NavigationExtras = {
       queryParams: {
@@ -42,7 +45,10 @@ export class HomePage {
     };
     this.router.navigate(['details'], navigationExtras);
   }
-
+  /**
+   * Esta función se llama cuando queremos cargar una pagina adicional de peliculas
+   * @param event 
+   */
   loadData(event){
     this.api.getMoviesList(++this.id_list,this.pageNumber++).subscribe(res=>{
       console.log(res);
