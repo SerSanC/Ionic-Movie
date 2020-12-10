@@ -8,7 +8,7 @@
 <a href="https://ionicframework.com/">Ionic Framework V5</a>
 </li>
 <li>
-<a href="https://angular.io/">Ionic Angular V10</a>
+<a href="https://angular.io/">Angular V10</a>
 </li> </p></lu>
 
 ## Prerequisites:
