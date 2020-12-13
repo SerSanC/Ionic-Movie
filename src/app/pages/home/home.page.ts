@@ -74,6 +74,7 @@ export class HomePage {
       this.api.searchMovie(event.detail.value).subscribe(res=>{
         console.log(res);
         this.data=res['results']
+        console.log("Poster "+res['results'].poster_path)
       },err=>{
         console.log('Porfavor, compruebe su conexión');
       })

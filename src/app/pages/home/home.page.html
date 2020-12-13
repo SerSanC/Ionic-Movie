@@ -17,13 +17,13 @@
   </ion-header>
  
   <ion-item  button detail *ngFor='let i of data' (click)='view(i)'>
-    <ion-thumbnail slot="start">
+    <ion-thumbnail slot="start" *ngIf= 'api.baseImageUrl+i.poster_path!=null'>
       <img [src]="api.baseImageUrl+i.poster_path">
     </ion-thumbnail>
-    <ion-label class="ion-text-wrap">
+    <ion-label class="ion-text-wrap" *ngIf= 'api.baseImageUrl+i.poster_path!=null'>
         <h2><b>{{i.title}}</b></h2>
-      <ion-text color="warning">
-        <p>⭐️{{i.vote_average}}</p>
+      <ion-text color="warning" *ngIf= 'api.baseImageUrl+i.poster_path!=null'>
+        <p>⭐️ {{i.vote_average}}</p>
       </ion-text>
     </ion-label>
   </ion-item>

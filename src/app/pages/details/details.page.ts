@@ -16,13 +16,14 @@ export class DetailsPage implements OnInit {
   public res :boolean;
   public view : boolean;
   public trailer: string;
-
+  public genre:string;
   constructor(
     public route:ActivatedRoute,
     public api:ApiService,
     public platform: Platform
   ) { 
     this.res = false;
+    this.genre = ""
     this.route.queryParams.subscribe(params => {
       if (params && params.data) {
         this.data = JSON.parse(params.data);
@@ -49,6 +50,7 @@ export class DetailsPage implements OnInit {
 
   ngOnInit() {
     this.loadYoutubeVideo()
+    this.loadGenre()
   }
   /**
    * Función encargada de adaptar la abreviatura del idioma devuelto por el json a su correcto nombre
@@ -71,7 +73,6 @@ export class DetailsPage implements OnInit {
     return this.res;
   }
 
-  
   loadYoutubeVideo(){
     this.api.getVideoMovie(this.data.id).subscribe(res=>{
       console.log(res)        
@@ -92,5 +93,22 @@ export class DetailsPage implements OnInit {
     tag.src = "https://www.youtube.com/iframe_api";
     document.body.appendChild(tag);
     return this.view;
+  }
+
+  loadGenre(){
+    this.api.getGenre(this.data.id).subscribe(gen=>{
+      console.log("Pu"+ gen['id'])        
+      if(gen['genres'].length == 0){
+        console.log("Prueba"+gen['results'])
+      }
+      else{
+        for(let i in gen['genres']){        
+          this.genre += gen['genres'][i].name + ","
+          console.log(this.genre)
+        }
+        //this.trailer = res['results'][0].key;
+        //this.view = true;
+      }
+    });
   }
 }

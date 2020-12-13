@@ -20,6 +20,7 @@
   <p><b>Fecha de lanzamiento: </b>{{data.release_date}}</p>
   <p *ngIf='idiom(data)'><b >Idioma original: </b>{{data.original_language}}</p>
   <p><b>Puntuación: </b>{{data.vote_average}} ⭐️</p>
+  <p *ngIf='genre!=null'><b>Genero:</b>{{genre}}</p>
   <p style="text-align:justify"><b>Descripción: </b>{{data.overview}}</p>
 </div>
 <div class = "ion-text-center"> 
