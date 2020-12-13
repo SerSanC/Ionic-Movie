@@ -15,11 +15,22 @@
     {{data.title}}
   </div>
 </div>
-<div class="ion-padding content">
+<div class="ion-padding content ">
   <img class="icon" [src]='api.baseImageUrl+data.poster_path'>
   <p><b>Fecha de lanzamiento: </b>{{data.release_date}}</p>
   <p *ngIf='idiom(data)'><b >Idioma original: </b>{{data.original_language}}</p>
   <p><b>Puntuación: </b>{{data.vote_average}} ⭐️</p>
   <p style="text-align:justify"><b>Descripción: </b>{{data.overview}}</p>
+</div>
+<div class = "ion-text-center"> 
+  <p *ngIf='view==true'><b>Tráiler: <hr/></b>
+    
+     
+    <youtube-player videoId={{trailer}}  [height]=altura [width]=anchura  suggestedQuality="highres">
+    </youtube-player>
+  
+  
+
+  </p>
 </div>
 </ion-content>

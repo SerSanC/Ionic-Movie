@@ -26,4 +26,7 @@ export class ApiService {
   searchMovie(text){
     return this.http.get(this.baseUrl+'3/search/movie?api_key='+this.apiKey+'&language=es-ES&query='+text+'&page=1&include_adult=false',{headers:this.setHeader()});
   }
+  getVideoMovie(movie_id){
+    return this.http.get(this.baseUrl+'3/movie/'+movie_id+'/videos?api_key='+this.apiKey+'&language=es-ES',{headers:this.setHeader()});
+  }
 }
