@@ -9,7 +9,8 @@
 </li>
 <li>
 <a href="https://angular.io/">Angular V10</a>
-</li> </p></lu>
+</li> </p>
+</lu>
 
 ## Prerequisites:
 1. <a href="https://nodejs.org/es/download/">Node.js</a> to be installed.
@@ -21,6 +22,7 @@ $ npm install -g @angular/cli
 ```
 $ npm install -g @ionic/cli
 ```
+4. <a href="https://www.themoviedb.org/?language=es">TheMovieDB API</a>
 
 ## How to use:
 1. clone the project.
